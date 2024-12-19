@@ -20,7 +20,7 @@ namespace AbilityScore
             double divided = RollResult / DivideBy;
 
             // AddAmount를 나눗셈 결과에 더합니다. 소수점 이하를 버리고 정수를 만듦
-            int added = AddAmount += (int)divided;
+            int added = AddAmount + (int)divided;
 
             // 결과 값이 너무 작으면 Minimum 값을 사용합니다.
             if (added < Minimum)

@@ -27,5 +27,21 @@ namespace AbilityScore
                 return lastUsedValue;
             }
         }
+
+        public static double ReadDouble(double lastUsedValue, string prompt)
+        {
+            Console.Write($"{prompt}[{lastUsedValue}]: ");
+            string line = Console.ReadLine();
+            if (double.TryParse(line, out double value))
+            {
+                Console.WriteLine($"    using value {value}");
+                return value;
+            }
+            else
+            {
+                Console.WriteLine($"    using default value {lastUsedValue}");
+                return lastUsedValue;
+            }
+        }
     }
 }

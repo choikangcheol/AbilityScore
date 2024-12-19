@@ -15,7 +15,8 @@ namespace AbilityScore
             {
                 calculator.RollResult = ReadInt(calculator.RollResult, "Starting 4d6 roll");
                 calculator.DivideBy = ReadDouble(calculator.DivideBy, "Divide by");
-                calculator.AddAmount = ReadInt(calculator.Minimum, "Minimum");
+                calculator.AddAmount = ReadInt(calculator.AddAmount, "Add amount");
+                calculator.Minimum = ReadInt(calculator.Minimum, "Minimum");
                 calculator.CalculateAbilityScore();
                 Console.WriteLine($"Calculated ability score: {calculator.Score}");
                 Console.WriteLine("Press Q to quit, and other key to continue.");
